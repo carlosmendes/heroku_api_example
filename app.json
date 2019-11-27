@@ -4,7 +4,7 @@
   "website": "http://rubyonrails.org",
   "repository": "https://github.com/carlosmendes/heroku_api_example",
   "scripts": {
-    "postdeploy": "bundle exec rake db:migrate"
+    "postdeploy": "bundle exec rails g scaffold Company name && bundle exec rails db:migrate"
   },
   "env": {
     "RAILS_ENV": "production",

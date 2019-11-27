@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
     # p migrate_result
 
-    result = heroku.appsetups.create({source_blob: {url: "https://github.com/carlosmendes/heroku_api_example/tarball/master/"}})
+    result = heroku.app_setup.create({source_blob: {url: "https://github.com/carlosmendes/heroku_api_example/tarball/master/"}})
 
     redirect_to root_path, notice: result['app']['name']
   end
